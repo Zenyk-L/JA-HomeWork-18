@@ -77,15 +77,29 @@
 					</div>
 
 					<div class="form-group">
-						<label for="level">Level:</label> <input type="text"
+						<label for="level">Level:</label>
+						<%-- <input type="text"
 							class="form-control" id="level" name="level"
-							value="${participant.level}">
-					</div> 
-					<div class="form-group">
-						<label for="skill">Primary Skill</label> <input type="text"
-							class="form-control" id="skill" name="skill"
-							value="${participant.primarySkill}">
+							value="${participant.level}"> --%>
+
+						<select class="form-select" aria-label="Default select example"
+							id="level" name="level"  >
+							<option selected value="${participant.level}">${participant.level}</option>
+							<option value="L1">L1</option>
+							<option value="L2">L2</option>
+							<option value="L3">L3</option>
+							<option value="L4">L4</option>
+							<option value="L5">L5</option>
+						</select>
 					</div>
+					<div class="form-group">
+						<label for="primarySkill">Primary Skill</label> <input type="text"
+							class="form-control" id="primarySkill" name="primarySkill"
+							value="${participant.primarySkill}">
+
+					</div>
+
+
 					<button type="submit" class="btn btn-default">Submit</button>
 				</form>
 			</c:when>
